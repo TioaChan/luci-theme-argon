@@ -11,7 +11,7 @@ name: Merge-upstream
 on:
   push:
     branches: 
-      - master
+      - '18.06'
   schedule:
     - cron: 30 19 * * *
 
@@ -49,5 +49,5 @@ jobs:
         fi
     - name: Push Commits
       env: 
-        DOWNSTREAM_BRANCH: 18.06
+        DOWNSTREAM_BRANCH: '18.06'
       run: git push origin $DOWNSTREAM_BRANCH
